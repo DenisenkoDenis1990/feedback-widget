@@ -1,7 +1,6 @@
 import React from 'react';
 
 const FeedbackOptions = ({ onLeaveFeedback, options }) => {
-  const capitalized = null;
   return (
     <div>
       {options.map(option => {
