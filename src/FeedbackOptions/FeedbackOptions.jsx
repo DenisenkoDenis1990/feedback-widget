@@ -3,7 +3,7 @@ import React from 'react';
 const FeedbackOptions = ({ onLeaveFeedback, options }) => {
   return (
     <div>
-      {options.map(option => {
+      {Object.keys(options).map(option => {
         return (
           <button
             type="button"
