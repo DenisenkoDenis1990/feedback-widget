@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import Section from './Section/Section';
+import Section from '../Section/Section';
 import FeedbackOptions from 'FeedbackOptions/FeedbackOptions';
-import Statistics from './Statistics/Statistics';
+import Statistics from '../Statistics/Statistics';
 import Notification from 'Notification/Notification';
+import { Container } from './App.styled';
 
 const App = () => {
   const [good, setGood] = useState(0);
@@ -44,7 +45,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <Container>
       <Section title="Please leave feedback">
         <FeedbackOptions onLeaveFeedback={handleIncreament} options={options} />
       </Section>
@@ -62,7 +63,7 @@ const App = () => {
       ) : (
         <Notification message="There is no feedback" />
       )}
-    </>
+    </Container>
   );
 };
 
